@@ -34,9 +34,9 @@
      box-sizing: border-box !important;
 }
 
-.container {
+/* .container {
      max-width: 1170px;
-}
+} */
 
 html {
      scroll-behavior: smooth;
@@ -326,12 +326,37 @@ ul.search li a:hover {
 
 /** banner section **/
 
-.full_bg {
+/* .full_bg {
      background: url(../images/banner2.jpg);
      background-size: cover;
      background-position: center;
      background-repeat: no-repeat;
-}
+} */
+
+
+.container {
+     max-width: 1170px;
+     width: 100%; /* Ensures the container is responsive */
+     margin: 0 auto; /* Centers the container */
+     padding: 0 15px; /* Adds some padding on the sides */
+ }
+ 
+ .full_bg {
+     background: url(../images/banner2.jpg);
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+ }
+ 
+ /* Add a media query for smaller screens */
+ @media (max-width: 600px) {
+     .full_bg {
+         min-height: 50vh; /* Adjust this value as needed for smaller screens */
+     }
+ }
+ 
+
 
 .banner_main {
      position: relative;
